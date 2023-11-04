@@ -7,6 +7,19 @@ function task8() {
   // Викликаємо функцію fetchFakeData
   // Якщо проміс виконаний успішно виводимо в консоль дані які він повертає
   // Якщо проміс виконаний з помилкою виводимо в консоль помилку
+  function fetchFakeData() {
+    return new Promise((resolve, reject) => {
+      const fakeData = { name: "John", age: 30 };
+      resolve(fakeData);
+    });
+  }
+  fetchFakeData()
+    .then((value) => {
+      console.log(value);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 }
 
 // Викликаємо функцію task8

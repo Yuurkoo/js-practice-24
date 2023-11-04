@@ -7,6 +7,18 @@ function task9() {
   // Викликаємо функцію fetchWithError
   // Якщо проміс виконаний успішно виводимо в консоль дані які він повертає
   // Якщо проміс виконаний з помилкою виводимо в консоль помилку
+  function fetchWithError() {
+    const errorMessage = new Error("Помилка при з'єднанні з сервером");
+    return Promise.reject(errorMessage);
+  }
+
+  fetchWithError()
+    .then((value) => {
+      console.log(value);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 }
 
 // Викликаємо функцію task10
